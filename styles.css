@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+.header {
+    width: 100%;
+    background-color: #130d0d;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    height: 10vh;
+}
+
+.header h1, .header p {
+    margin: 10px 0;
+    color: #f4f4f4;
+    text-align: right;
+
+}
+
+
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 150px;
+    background-color: #d8d7d7;
+    padding: 20px;
+    position: relative;
+}
+
+.down {
+    margin-top: 100px;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.content section {
+    margin-bottom: 20px;
+}
+
+.content section h3 {
+    margin-top: 0;
+}
+
+.profile {
+    position: absolute;
+    top: 40px; /* Adjust as needed to position the profile picture */
+    margin-left: 20px;
+    text-align: center;
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 4px solid white;
+    cursor:pointer;
+    filter: grayscale(100%);
+}
+
+.profile img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    box-shadow: 3px 3px 20px rgba(0,0,0,.5);
+}
+
+.profile h2, .profile p {
+    margin: 10px 0;
+}
+
+.skill h3 {
+    margin-top: 50px;
+}
+
+.progress{
+    /* margin-top: 30px; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-gap: 5px; */
+}
+.progress .progress-bar p{
+    font-size: 15px;
+    font-weight: bold;
+}
+.progress-bar span{
+    display: block;
+    width: 70px;
+    height: 10px;
+    background-color: rgb(192, 191, 191);
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.progress-bar span::before{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 80%;
+    background-color: black;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+.btn-rg {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #35373a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    direction: rtl; /* Set the text direction to right-to-left */
+    position: absolute;
+}
+
+/* Print Styles */
+@media print {
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .header {
+        background-color: #130d0d !important;
+        color: #f4f4f4 !important;
+    }
+
+    .sidebar {
+        background-color: #d8d7d7 !important;
+    }
+
+    .header h1, .header p {
+        color: #f4f4f4 !important;
+    }
+
+    .btn-rg {
+        display: none;
+    }
+}
